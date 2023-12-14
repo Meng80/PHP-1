@@ -1,0 +1,87 @@
+# rutas.yml
+---
+ruta_raíz:
+    path:     /
+    controller: 'funcionHomePage'
+    methods:   [ GET ]
+
+ruta_user_list:
+    path:     /users
+    controller: 'funcionListadoUsuarios'
+    methods:
+      - GET
+
+ruta_user:
+    path:     /users/{name}  //nombre es parametro
+    controller: 'funcionUsuario'
+    defaults:
+        name: _default_
+    methods:
+        - GET
+        - DELETE
+
+ruta_agregar_usuario_form:
+    path: /users/agregar/form
+    controller: 'funcionAgregarUsuarioForm'
+
+ruta_procesar_agregar_usuario:
+    path: /users/agregar
+    controller: 'funcionAgregarUsuario'
+    methods: POST
+
+
+ruta_eliminar_usuario_form:
+    path: /users/eliminar/form
+    controller: 'funcionEliminarUsuarioForm'
+
+ruta_procesar_eliminar_usuario:
+    path: /users/eliminar
+    controller: 'funcionEliminarUsuario'
+    methods: POST
+
+ruta_modificar_usuario_form:
+    path: /users/modificar/form
+    controller: 'funcionModificarUsuarioForm'
+
+ruta_procesar_modificar_usuario:
+    path: /users/modificar
+    controller: 'funcionModificarUsuario'
+    methods: POST
+
+ruta_result_list:
+    path: /results
+    controller: 'funcionListadoResult'
+    methods:
+        - GET
+
+ruta_crear_result_form:
+    path: /results/crear/form
+    controller: 'funcionCrearResultForm'
+    methods: GET
+
+ruta_crear_resultado:
+    path: /results/crear
+    controller: 'funcionCrearResult'
+    methods: POST
+
+ruta_eliminar_result_form:
+    path: /results/eliminar/form
+    controller: 'funcionEliminarResultForm'
+    methods: GET
+
+ruta_eliminar_result:
+    path: /results/eliminar
+    controller: 'funcionEliminarResult'
+    methods: POST
+
+ruta_buscar_result_form:
+    path: /results/buscar/form
+    controller: 'funcionBuscarResultForm'
+    methods: GET
+
+ruta_buscar_result:
+    path: /results/buscar
+    controller: 'funcionBuscarResult'
+    methods: POST
+
+
